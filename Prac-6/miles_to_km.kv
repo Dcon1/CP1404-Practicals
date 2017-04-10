@@ -1,11 +1,30 @@
+<Widget>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    color: 255, 255, 255, 1
+
+<Button>:
+    font_size: 50
+    background_normal: ''
+    background_down: 'atlas://data/images/defaulttheme/button'
+    canvas.after:
+        Color:
+            rgba: 0, 0, 0, 1
+        Line:
+            rectangle: self.x + 1, self.y + 1, self.width - 1, self.height - 1
+
 BoxLayout:
     orientation: "vertical"
     BoxLayout:
         orientation: "horizontal"
         TextInput:
             id: user_input
-            text: "34"
-            font_size: "100"
+            #text: "34"
+            #font_size: "100"
             on_text: app.get_user_input()
         BoxLayout:
             orientation: "vertical"
@@ -23,5 +42,5 @@ BoxLayout:
         on_press: app.calculate_kilometers()
     Label:
         id: display_output
-        font_size: "100"
+        #font_size: "100"
 
