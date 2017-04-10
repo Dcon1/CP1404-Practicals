@@ -1,0 +1,19 @@
+BoxLayout:
+    orientation: "vertical"
+    BoxLayout:
+        orientation: "vertical"
+        id: namesBox
+        orientation: "vertical"
+    Label:
+        id: statusLabel
+        size_hint_y: 0.2
+        text: app.status_text
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: 0.2
+        Button:
+            text: "add names"
+            on_release: app.create_widgets()
+        Button:
+            text: "Clear names!"
+            on_release: app.clear_all()
